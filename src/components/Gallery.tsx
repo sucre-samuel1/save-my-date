@@ -4,7 +4,7 @@ import { FiX } from 'react-icons/fi'
 
 const images = [
   {
-    src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed',
+    src: 'assets/WhatsApp Image 2025-07-01 at 15.51.08 (1).jpeg',
     alt: 'Couple on beach'
   },
   {
@@ -12,7 +12,7 @@ const images = [
     alt: 'Proposal moment'
   },
   {
-    src: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e',
+    src: 'assets/WhatsApp Image 2025-07-01 at 15.51.08.jpeg',
     alt: 'Engagement photo'
   },
   {
@@ -26,7 +26,7 @@ export const Gallery = () => {
 
   return (
     <section className="my-16">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -34,7 +34,7 @@ export const Gallery = () => {
       >
         Our Story
       </motion.h2>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
         {images.map((image, index) => (
           <motion.div
@@ -59,7 +59,7 @@ export const Gallery = () => {
       {/* Lightbox */}
       {selectedImage !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-          <button 
+          <button
             onClick={() => setSelectedImage(null)}
             className="absolute top-4 right-4 text-white text-2xl"
           >

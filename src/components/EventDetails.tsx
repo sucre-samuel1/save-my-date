@@ -20,7 +20,7 @@ export const EventDetails = ({ date }: EventDetailsProps) => {
 
   return (
     <section className="my-16">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -28,7 +28,7 @@ export const EventDetails = ({ date }: EventDetailsProps) => {
       >
         Event Details
       </motion.h2>
-      
+
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 p-8">
@@ -40,22 +40,29 @@ export const EventDetails = ({ date }: EventDetailsProps) => {
                 <p className="text-gray-600">{formattedTime}</p>
               </div>
             </div>
-            
+
             <div className="flex items-start">
               <MapPin className="text-secondary mr-4 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">Where</h3>
-                <p className="text-gray-600">The Grand Ballroom</p>
-                <p className="text-gray-600">123 Wedding Lane</p>
-                <p className="text-gray-600">Happytown, USA</p>
-              </div>
+             <div>
+  <h3 className="text-xl font-semibold text-gray-800">Where</h3>
+  <p className="text-gray-600"> Ikola-Odunsi </p>
+  <p className="text-gray-600">Lagos, Nigeria</p>
+
+  {/* Button */}
+  <button
+    onClick={() => window.open("https://example.com/the-grand-ballroom", "_blank")}
+    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+  >
+    Join Virtual Event
+  </button>
+</div>
+
             </div>
           </div>
-          
           <div className="md:w-1/2 bg-gray-100">
             {/* Google Maps Embed */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209132834!2d-73.9878449242393!3d40.7484409713899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1683037467702!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.01567999832!2d3.379205!3d6.524379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf44e2b3816d3%3A0xe23f0a4c7e53a960!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1683037467702!5m2!1sen!2sng"
               width="100%"
               height="100%"
               className="min-h-64 md:min-h-full"
@@ -65,6 +72,7 @@ export const EventDetails = ({ date }: EventDetailsProps) => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+
         </div>
       </div>
     </section>

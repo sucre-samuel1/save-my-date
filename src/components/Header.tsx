@@ -5,8 +5,9 @@ import { Heart } from 'lucide-react';
 export const Header = () => {
 
   return (
-    <header className="relative overflow-hidden bg-primary text-white py-16 text-center">
-      <div className="absolute inset-0 bg-opacity-20 bg-black"></div>
+    <header className="relative overflow-hidden bg-primary text-black py-16 text-center">
+   <div className="absolute inset-0 bg-opacity-20 bg-blue-500"></div>
+
       
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
