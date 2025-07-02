@@ -42,29 +42,33 @@ export const Countdown = ({ targetDate }: CountdownProps) => {
   ]
 
   return (
-    <section className="my-16 text-center">
-      <motion.h2 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-4xl font-script mb-8 text-primary"
-      >
-        Counting Down
-      </motion.h2>
-      
-      <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-        {countdownItems.map((item, index) => (
-          <motion.div
-            key={item.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="bg-white p-6 rounded-xl shadow-lg w-28"
-          >
-            <div className="text-4xl font-bold ">{item.value}</div>
-            <div className="text-gray-600 mt-2">{item.label}</div>
-          </motion.div>
-        ))}
+    <section className="py-16 bg-[#FFF8F0]"> {/* Cream background */}
+      <div className="max-w-6xl mx-auto px-4">
+        <motion.h2 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-4xl font-script mb-12 text-primary text-center"
+        >
+          Counting Down
+        </motion.h2>
+        
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+          {countdownItems.map((item, index) => (
+            <motion.div
+              key={item.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white p-6 rounded-xl shadow-lg w-28 border border-cream-200"
+            >
+              <div className="text-4xl font-bold text-primary">{item.value}</div>
+              <div className="text-gray-600 mt-2 uppercase text-sm tracking-wider">
+                {item.label}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )
