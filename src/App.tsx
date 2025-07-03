@@ -15,7 +15,7 @@ function App() {
       <main className="container mx-auto px-4 py-12">
         <Countdown targetDate={weddingDate} />
         <EventDetails date={weddingDate} />
-        <Gallery />
+        {/* <Gallery /> */}
         {/* <RSVP /> */}
       </main>
       
