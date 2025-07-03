@@ -49,6 +49,14 @@ export const Header = () => {
         >
           Save the Date
         </motion.p>
+         <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="text-secondary text-xl mt-6 font-medium tracking-wider"
+        >
+          05/07/2025
+        </motion.p>
       </motion.div>
     </header>
   )
