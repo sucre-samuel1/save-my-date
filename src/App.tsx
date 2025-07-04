@@ -7,7 +7,7 @@ import { Footer } from './components/Footer'
 import './index.css'
 
 function App() {
-  const weddingDate = new Date('2025-07-05T10:00:00') // Update with your date
+  const weddingDate = new Date('2025-07-05T12:00:00') // Update with your date
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
