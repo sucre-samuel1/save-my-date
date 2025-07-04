@@ -57,7 +57,7 @@ export const EventDetails = ({ date }: EventDetailsProps) => {
                   <p className="text-gray-700">Ikola-Odunsi</p>
                   <p className="text-gray-700">Lagos, Nigeria</p>
                   <button
-                    onClick={() => window.open("https://example.com/the-grand-ballroom", "_blank")}
+                    onClick={() => window.open("https://meet.google.com/vvn-ohot-qku", "_blank")}
                     className="mt-4 px-4 py-2 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700 transition-colors shadow-sm"
                   >
                     Join Virtual Event
